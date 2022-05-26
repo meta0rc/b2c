@@ -1,0 +1,43 @@
+.user{
+    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 3px 3px rgb(185, 185, 185);
+    color: rgb(139, 139, 139);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.profile { 
+    display: flex;
+    align-items: center;
+}
+.user .imgUser{
+    border-radius: 100%;
+    margin: 5px 15px;
+    width: 53px;
+    height: 53px;
+    padding: 2px;
+}
+.user img:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.user .logout{
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+    background: tomato;
+    color: rgb(221, 221, 221)
+    
+}
+.user .logout:hover{
+
+    cursor: pointer;
+    background-color: rgb(60, 216, 107);
+    color: #333;
+}

@@ -1,0 +1,12 @@
+.containerInitialcontact h1{
+    font-size: 3em;
+    font-weight: bold;
+}
+.btn-info{
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: orange;
+    margin: 10px 0;
+    font-size: 1em;
+}

@@ -1,0 +1,13 @@
+import { createContext } from "react";
+import { User } from '../types/User'
+
+export type AuthContext = {
+    user: User | null,
+    login: (email: string, password: string) => Promise<boolean>
+    logout: () => void
+    PerfilImage: (formData : FormData) => Promise<boolean>
+    RegisterUser: (FormData: FormData)=> Promise<boolean>
+
+}
+
+export const Context = createContext<AuthContext>(null!)

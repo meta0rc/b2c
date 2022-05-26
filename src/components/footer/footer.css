@@ -1,0 +1,22 @@
+footer {
+  
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    justify-content: left;
+  
+}
+footer .logo{
+    margin: 0 auto;
+}
+footer .logo img {
+    width: 50px;
+}
+.copy { 
+    padding: 3%;
+    color: #fff;
+    font-size: 0.8em;
+
+
+}

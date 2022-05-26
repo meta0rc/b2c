@@ -1,0 +1,15 @@
+* {
+    font-family: Roboto;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(204, 204, 204, 0.205);;
+}
+.center-headers {
+    text-align: center;
+    margin: 15px 0 0;
+    font-size: 2.5em;
+}

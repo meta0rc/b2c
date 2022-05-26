@@ -1,0 +1,86 @@
+.container-profile-user-id{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.profile-perfil-user-image{
+
+    width: 100px; height: 100px;
+    margin-right: 25px;
+    background-size: cover;
+    border: 3px solid #ccc;
+    border-radius: 100%;
+    
+
+}
+#profile-user-by{
+    position: relative;
+}
+.icons-profile-id{
+    position: absolute;
+    right: 25px;
+    top: 10px;
+}
+.icon-profile-id{
+    margin: 0 3px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.columns-profile-user{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.containerProfile { 
+
+    color: #000;
+    border: 1px solid rgba(109, 109, 109, 0.192);
+    padding: 20px;
+    border-radius: 3px;
+    margin: 15px;
+    box-sizing: border-box;
+}
+#evaluetion-page{
+    text-align: center;
+}
+#evaluetion-page input, textarea {
+    padding: 15px;
+    margin: 20px auto 5px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+#rates{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.rate{
+    padding: 25px;
+    text-align: center;
+    width: 100px;
+    margin: 15px 15px 0 0 ;
+
+    border-radius: 3px;
+}
+[data-initial] {
+    color: grey;
+}
+[data-rate] {
+    color: gold
+}
+.stars-rate{
+    padding: 3px;
+}
+@media (min-width: 760px) {
+    .containerProfile{
+        width: 70%;
+        margin: 15px auto;
+     
+    }
+}
+

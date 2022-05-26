@@ -1,0 +1,133 @@
+@media (min-width: 1000px){
+    #burger-commum { 
+        display: none;
+    }
+    #toggle-commum {
+        position: initial !important;
+        background: none !important;
+        width: auto !important;
+        right: 0;
+        text-align: left ;
+        box-shadow: none !important;
+        padding: 0 !important;
+        height: auto !important;
+        right: auto ;
+        transition: 0.6s ease-in-out; 
+    }
+    #toggle-commum .auth-user-nav-mobile {
+         display: none !important;
+    }
+    #toggle-commum .icons-nav-bar {
+        margin: 0 2px;
+    }
+    #toggle-commum .logout-li { 
+        background-color: rgb(156, 156, 156);
+        padding: 10px 15px;
+    }
+    #toggle-commum li {
+        margin: 0 18px;
+    }
+    #toggle-commum .list-nav-bar {
+         display: flex;
+    }
+}
+a {
+    z-index: 9;
+    padding: 10px;
+    position: relative;
+}
+.burger-button:hover{
+    cursor: pointer;
+}
+.burger-button span{
+    border: 1px solid rgb(110, 110, 110);
+    display: flex;
+    width: 30px;
+    margin: 5px 0;
+    position: relative;
+    z-index: 999;
+}
+[first-bar]{
+    transform: rotate(45deg);
+    transition: 0.5s;
+    border: solid 1px #333 !important;
+    
+}
+[second-bar] { 
+    transform: rotate(-45deg);
+    position: relative;
+    top: -6px;
+    transition: 0.5s;
+    border: solid 1px #333 !important;
+}
+[hide] {
+    display: none !important;
+}
+
+.menu-togle {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    right: 0;
+    text-align: left;
+    box-shadow: 0 0 2px #ccc;
+    padding: 8%;
+    height: 100%;
+    right: -100%;
+    transition: 0.6s ease-in-out; 
+}
+[menu-active] {
+    right: 0 !important;
+    transition: 0.6s ease-in-out;
+}
+.menu-togle li {
+    margin: 20px 0;
+}
+.menu-togle li a {
+    font-size: 17px;
+    color: rgb(92, 92, 92);
+
+
+}
+[active-bar] {
+    color: #000;
+    z-index: 4;
+    position: fixed;
+    right: 29px;
+    top: 47px;
+    
+}
+
+.icons-nav-bar{
+    color: rgb(44, 184, 172);
+    margin: 0 15px;
+}
+.list-nav-bar li a, .list-nav-bar li span {
+    padding: 5px 0;
+    color: #333;
+}
+.list-nav-bar li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.list-nav-bar li:hover *{
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+}
+.logout-li{
+    background-color: rgba(236, 236, 236, 0.575);
+    display: inline;
+    padding: 15px 0;
+    margin-right: 25px !important;
+    border-radius: 5px;
+}
+.logout-li:hover {
+    
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.356);
+    cursor: pointer;
+}
