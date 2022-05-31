@@ -1,6 +1,4 @@
 import axios from "axios";
-import { useState } from "react";
-import { User } from "../types/User";
 
 const api = axios.create({
     baseURL: 'https://api-b2c.herokuapp.com/'
