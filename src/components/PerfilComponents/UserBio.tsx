@@ -57,7 +57,7 @@ export const UserBio = () => {
 
     const handleActiveEditeionBio = () => {
 
-        textarea?.classList.toggle('activeEdition')
+        textarea?.classList.remove('activeEdition')
         bioP?.toggleAttribute('hidden')
 
     }

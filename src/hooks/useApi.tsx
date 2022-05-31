@@ -3,7 +3,7 @@ import { useState } from "react";
 import { User } from "../types/User";
 
 const api = axios.create({
-    baseURL: 'http://localhost:3030'
+    baseURL: 'https://api-b2c.herokuapp.com/'
 })
 
 

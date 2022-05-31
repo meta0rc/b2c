@@ -235,7 +235,7 @@
     display: none;
 }
 .relations-jobs li {
-    margin: 0 5px;
+    margin: 10px 5px;
     border-radius: 25px;
     background: #ccc;
     padding: 5px 15px;
