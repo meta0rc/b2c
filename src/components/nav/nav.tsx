@@ -169,9 +169,9 @@ export const Nav = (props: any) => {
                                 <span > Home </span>
                             </li>
 
-                            <li>
+                            <li onClick={()=> navigate('/perfil')}>
                                 <BsFillPersonLinesFill className='icons-nav-bar'/>
-                            <a href="/perfil">
+                            <a href="#">
                                 <span > Meu Perfil </span>
                             </a>
                             </li>

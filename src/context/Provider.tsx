@@ -23,7 +23,7 @@ export const Provider = ({children} : {children: JSX.Element}) => {
 
         validateToken()
 
-    }, [document])
+    }, [useApi])
 
     const login = async (email: string, password: string) => {
         
