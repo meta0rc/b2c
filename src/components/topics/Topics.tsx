@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import './topics.css'
-import Serralheiro from "../../assets/images/statics/serralheria.jpg"
-import Arquiteto from "../../assets/images/statics/arquiteto.jpg"
-import Programacao from "../../assets/images/statics/programacao.jpg"
+import Serralheiro from '../../assets/images/statics/serralheria.jpg'
+import Arquiteto from '../../assets/images/statics/arquiteto.jpg'
+import Programacao from '../../assets/images/statics/programacao.jpg'
 
 export const Topics = () => {
     const navigate = useNavigate()
