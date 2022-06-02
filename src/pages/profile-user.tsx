@@ -36,7 +36,7 @@ export const PerfilUser = () => {
             <PerfilTitle job={data?.job} />
 
             <PerfilContainer job={data?.job} wwp={data?.wwp} 
-            premium={data?.premium} name={data?.name} img={data?.img}/>
+            premium={data?.premium} name={data?.name} img={data?.img.replace('http://localhost:3000/src', '../..')}/>
 
             <PerfilDescription bio={data?.bio} geo={data?.geo} />
 
