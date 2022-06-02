@@ -23,12 +23,12 @@ export const FindJob = () => {
         const context = useContext(Context)
         context.setIDTOGet(id)
 
-        if(id){
-            const res = await api.getPerfil(id)
+        if(context.getID){
+            const res = await api.getPerfil(context.getID)
             if(!res){
                 return res
             }
-            navigate(`/user/${id}`)
+            navigate(`/user/${context.getID}`)
         }
     }
 
