@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Header } from "../components/header/header"
 import { useApi } from "../hooks/useApi"
 import '../components/profile-user-container/profile-user.css'
@@ -9,21 +9,24 @@ import { PerfilCertifications } from "../components/profile-user-container/Perfi
 import { PerfilEvaluetion } from "../components/profile-user-container/PerfilEvaluetion"
 import { PerfilAvaliebles } from "../components/profile-user-container/PerfilAvaliables"
 import { userRender } from "../types/UserRender"
+import { Context } from "../context/Contex"
 
 export const PerfilUser = () => {
     
 
     const api = useApi()
-    const id = document.URL.slice(49)
+    const context = useContext(Context)
+    const id = context.getID
     const [data, setData] = useState<userRender>()
 
     useEffect(()=>{
 
         const renderUser = async () => {
-
-            const res = await api.getPerfil(id)
-            setData(res.data.user)
-            console.log(res.data.user)
+            if(id){
+                const res = await api.getPerfil(id)
+                setData(res.data.user)
+                console.log(res.data.user)
+            }
         }
         renderUser()
     }, [document])

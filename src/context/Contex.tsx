@@ -3,6 +3,8 @@ import { User } from '../types/User'
 
 export type AuthContext = {
     user: User | null,
+    getID: String | null
+    setIDTOGet: (id: String) => void
     login: (email: string, password: string) => Promise<boolean>
     logout: () => void
     PerfilImage: (formData : FormData) => Promise<boolean>

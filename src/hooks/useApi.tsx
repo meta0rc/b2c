@@ -51,7 +51,7 @@ export const useApi = () => ({
         return response
     },
 
-    getPerfil: async(id: string) => {
+    getPerfil: async(id: String) => {
         const response = await api.get(`/user/${id}`)
         return response
     },

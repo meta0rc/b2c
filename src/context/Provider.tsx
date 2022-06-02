@@ -8,6 +8,7 @@ export const Provider = ({children} : {children: JSX.Element}) => {
  
     const api = useApi();
     const [user, setUser] = useState<User | null>(null)
+    const [getID, setgetID] = useState<String | null>(null)
     const store = localStorage.getItem('token')
 
     useEffect(()=> {
@@ -61,8 +62,12 @@ export const Provider = ({children} : {children: JSX.Element}) => {
 
     }
 
+    const setIDTOGet = (id: String) => {
+        setgetID(id)
+    }
+
     return(
-        <Context.Provider value={ {user, login, logout, PerfilImage, RegisterUser}}>
+        <Context.Provider value={ {user, getID, setIDTOGet, login, logout, PerfilImage, RegisterUser}}>
             { children }
         </Context.Provider>
     )

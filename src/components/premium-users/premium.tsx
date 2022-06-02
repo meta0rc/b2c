@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useApi } from "../../hooks/useApi"
 import './premium.user.css'
 import {FaCrow, FaCrown, FaStar} from 'react-icons/fa'
 import { useNavigate} from "react-router-dom"
+import { Context } from "../../context/Contex"
 
 export const Premium = () => {
 
@@ -20,8 +21,9 @@ export const Premium = () => {
     
     const navigate = useNavigate()
     const [data, setDatapi] = useState<Premium[]>([]) 
-    
+    const [idCliqued, setId] = useState('')
     const api = useApi()
+    const context = useContext(Context)
 
     const arr = new Array();
     let novo = 0
@@ -50,13 +52,16 @@ export const Premium = () => {
     }, [])
 
     
-   const handleClickUserGet = async (id: string) => {
-      
-        const res = await api.getPerfil(id)
-        if(!res){
-            return res
+   const handleClickUserGet = async (id: String) => {
+        context.setIDTOGet(id)
+        
+        if(context.getID){
+            const res = await api.getPerfil(context.getID)
+            if(!res){
+                return res
+            }
+            navigate(`/user/${context.getID}`)
         }
-        navigate(`/user/${id}`)
         
    }
 
