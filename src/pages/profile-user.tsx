@@ -14,7 +14,7 @@ export const PerfilUser = () => {
     
 
     const api = useApi()
-    const id = document.URL.slice(27)
+    const id = document.URL.slice(49)
     const [data, setData] = useState<userRender>()
 
     useEffect(()=>{
