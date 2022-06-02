@@ -17,10 +17,10 @@ export const FindJob = () => {
     const navigate = useNavigate()
     const [users, setUsers] = useState<userRender[]>()
     const [message, setMessage] = useState(true)
+    const context = useContext(Context)
 
     const handleClickUserGet = async (id: string) => {
 
-        const context = useContext(Context)
         context.setIDTOGet(id)
 
         if(context.getID){
