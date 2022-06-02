@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Evaluetions } from "../components/evaluetions/Evalutions"
 import { Header } from "../components/header/header"
 import { IconsProfile } from "../components/iconsProfile/iconsProfile"
 
 import { JobSearch } from "../components/search-bar/search"
+import { Context } from "../context/Contex"
 import { useApi } from "../hooks/useApi"
 import { userRender } from "../types/UserRender"
 
@@ -16,32 +17,32 @@ export const FindJob = () => {
     const navigate = useNavigate()
     const [users, setUsers] = useState<userRender[]>()
     const [message, setMessage] = useState(true)
+
     const handleClickUserGet = async (id: string) => {
 
-        const res = await api.getPerfil(id)
-        if(!res){
-            return res
-        }
-        navigate(`/user/${id}`)
+        const context = useContext(Context)
+        context.setIDTOGet(id)
 
+        if(id){
+            const res = await api.getPerfil(id)
+            if(!res){
+                return res
+            }
+            navigate(`/user/${id}`)
+        }
     }
 
     useEffect(()=> {
         const param = JobSearch.job ? JobSearch.job : document.URL.slice(30)
 
         const findJob = async () => {
-
             if(param){
-
                 const res = await api.FindJob(param)
-
                 if(res){
                     res.data.users ? setUsers(res.data.users) : setUsers(res.data.filtered)
                 }
                 else {
                     setMessage(false);
-
-                    console.log(message)
                 }
 
             }
